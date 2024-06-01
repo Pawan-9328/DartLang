@@ -1,14 +1,16 @@
 
-
-
 class Mathematics {
   int n1 = 0;
   int n2 = 0;
-
+//...parameterized contructor...
   Mathematics(int n1, int n2) {
     print("Object is created"); // constructor function
     this.n1 = n1;
-    this.n2 = n2; 
+    this.n2 = n2;
+  }
+
+  Mathematics.namedConstructor() {
+    print("This is a named constructor"); 
   }
 
   int addition() {
@@ -39,14 +41,16 @@ class Mathematics {
 //   }
 // }
 
-void main() {
+// void main() {
   // Addition obj = Addition();
 
   void main() {
     // Addition obj = Addition();
     // obj.add();
 
-    Mathematics m1 = new Mathematics(34,17);
+    //Mathematics m1 = new Mathematics(34, 17);
+    Mathematics m1 = new Mathematics.namedConstructor();
+    
     // int n1 = 34;
     // int n2 = 17;
 
@@ -59,4 +63,4 @@ void main() {
     double divResult = m1.division();
     print(divResult);
   }
-}
+// }
