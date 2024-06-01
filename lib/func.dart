@@ -20,13 +20,30 @@ import 'dart:io';
 
 ///..............Types Function............
 ///
-/////..Positional Parameters
+/////......Positional Parameters......
+///position can't be change
+
+// void main() {
+//   Map userData = userMap("keshav", 22, "M", 17);
+//   print(userData);
+// }
+
+// Map userMap(String name, int age, String gender, int userClass) {
+//   return {"name": name, "age": age, "gender": gender, userClass: "userClass"};
+// }
+
+//......Named Parameters.....
+//..put in any position and can;t passing key only passing parameteres 
 
 void main() {
-  Map userData = userMap("keshav", 22, "M", 17);
-  print(userData); 
+  Map userData = userMap(name: "keshav", age: 22, gender: "M", userClass: 12);
+  print(userData);
 }
 
-Map userMap(String name, int age, String gender, int userClass) {
+Map userMap({required String name,required int age,
+required String gender,
+required int userClass}
+
+) {
   return {"name": name, "age": age, "gender": gender, userClass: "userClass"};
 }
