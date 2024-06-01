@@ -11,9 +11,22 @@ import 'dart:io';
 //   return sum;
 // }
 
-String main() {
-  stdout.write("1.Enter Your Name ");
-  String name = stdin.readLineSync()!;
-  print("Your Name is = $name");
-  return name; 
+// String main() {
+//   stdout.write("1.Enter Your Name ");
+//   String name = stdin.readLineSync()!;
+//   print("Your Name is = $name");
+//   return name;
+// }
+
+///..............Types Function............
+///
+/////..Positional Parameters
+
+void main() {
+  Map userData = userMap("keshav", 22, "M", 17);
+  print(userData); 
+}
+
+Map userMap(String name, int age, String gender, int userClass) {
+  return {"name": name, "age": age, "gender": gender, userClass: "userClass"};
 }
