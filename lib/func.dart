@@ -33,17 +33,37 @@ import 'dart:io';
 // }
 
 //......Named Parameters.....
-//..put in any position and can;t passing key only passing parameteres 
+//..put in any position and can;t passing key only passing parameteres
+
+// void main() {
+//   Map userData = userMap(name: "keshav", age: 22, gender: "M", userClass: 12);
+//   print(userData);
+// }
+
+// Map userMap({required String name,required int age,
+// required String gender,
+// required int userClass}
+
+// ) {
+//   return {"name": name, "age": age, "gender": gender, userClass: "userClass"};
+// }
+
+//...Default Parameters...
 
 void main() {
-  Map userData = userMap(name: "keshav", age: 22, gender: "M", userClass: 12);
-  print(userData);
+  double length = 5.0;
+  double breadth = 2.0;
+
+  print(areaRec());
+  print(areaCircle());
 }
 
-Map userMap({required String name,required int age,
-required String gender,
-required int userClass}
+//positional para
+double areaRec({double length = 2.0, double breadth = 2.0}) {
+  return length * breadth;
+}
 
-) {
-  return {"name": name, "age": age, "gender": gender, userClass: "userClass"};
+//named para
+double areaCircle({double radius = 1.0}) {
+  return 3.14 * radius * radius;
 }
